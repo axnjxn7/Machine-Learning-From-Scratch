@@ -40,7 +40,6 @@ def design_matrix(X):
 
 def plots():
     try:
-
         folder = "linreg_images"
         os.makedirs(folder, exist_ok=True)
 
@@ -51,8 +50,6 @@ def plots():
         plt.plot(model.loss_history)
         plt.savefig(os.path.join(folder, "loss.png"))
         plt.close()
-
-        file_path = os.path.join(folder, "Actual vs Predicted.png")
 
         plt.figure(figsize=(8, 5))
         plt.scatter(X, y, label="Actual")
